@@ -24,7 +24,7 @@ def scrape_term(id, url)
   noko = noko_for(url)
   noko.xpath('//table[.//th[.="Þingmaður"]]//tr[td]').each do |tr|
     tds = tr.css('td')
-    area = id.to_i > 2008 ?  tr.xpath('preceding::h2/span[@class="mw-headline"]').last.text : tr.xpath('preceding::h4/span[@class="mw-headline"]').last.text 
+    area = id.to_i > 1990 ?  tr.xpath('preceding::h2/span[@class="mw-headline"]').last.text : tr.xpath('preceding::h4/span[@class="mw-headline"]').last.text 
     data = { 
       name: tds[2].css('a').text,
       wikiname: tds[2].xpath('.//a[not(@class="new")]/@title').text,
