@@ -1,8 +1,6 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-require 'colorize'
-require 'csv'
 require 'nokogiri'
 require 'pry'
 require 'scraperwiki'
