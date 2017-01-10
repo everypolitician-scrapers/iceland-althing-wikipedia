@@ -48,6 +48,7 @@ terms = {
   # '1987' => 'https://is.wikipedia.org/wiki/Kj%C3%B6rnir_al%C3%BEingismenn_1987',
 }
 
+ScraperWiki.sqliteexecute('DROP TABLE data') rescue nil
 terms.each do |id, url|
   scrape_term(id, url)
 end
